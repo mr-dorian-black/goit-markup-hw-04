@@ -6,6 +6,7 @@
   --filter-button-default-background: #f4f4fd;
   --filter-button-default-color: #4d5ae5;
   --address-link-color: #434455;
+  --ocean-color: #404bbf;
 }
 
 body {
@@ -366,29 +367,41 @@ img {
 }
 
 .team-links:hover {
-  background-color: #404bbf;
+  background-color: var(--ocean-color);
 }
 
 .section-five {
   padding: 120px 156px;
 }
 
-.section-five .item {
+/* .section-five .item {
   padding: 16px 32px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-}
+} */
 
-.section-five .item:hover {
+/* .section-five .item:hover {
   border: 1px solid #404bbf;
-}
+  fill: #404bbf;
+} */
+
+/* .section-five .list {
+  display: flex;
+  flex-wrap: wrap;
+} */
 
 .customers-icon {
+  width: 168px;
+  height: 88px;
+  padding: 16px 32px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
   fill: #8e8f99;
 }
 
 .customers-icon:hover {
-  fill: #404bbf;
+  border: 1px solid var(--ocean-color);
+  fill: var(--ocean-color);
 }
 
 .footer-title {
@@ -402,4 +415,77 @@ img {
 
 .social-icon:hover {
   background-color: #31d0aa;
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay .text {
+  position: absolute;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+  background-color: #4d5ae5;
+  margin: 0 0;
+}
+
+.section-filter .item:hover .text {
+  transform: translateY(0);
+}
+
+.backdrop {
+  position: fixed;
+  background: rgba(46, 47, 66, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  background-color: #ffffff;
+  margin: 80px auto;
+  width: 408px;
+  height: 584px;
+}
+
+.modal .button-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  right: 24px;
+  top: 24px;
+  z-index: 10;
+  cursor: pointer;
+  fill: var(--main-text-color);
+}
+
+.modal .button-close:hover {
+  border: none;
+  background-color: var(--ocean-color);
+  fill: #ffffff;
+}
+
+.modal .button-close svg {
+  fill: inherit;
 }
