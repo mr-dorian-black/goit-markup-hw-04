@@ -447,6 +447,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
+  transition: opacity 250ms linear;
 }
 
 .is-hidden {
@@ -458,7 +459,9 @@ img {
 .modal {
   position: relative;
   background-color: #ffffff;
-  margin: 80px auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 408px;
   height: 584px;
 }
