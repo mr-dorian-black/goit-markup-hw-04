@@ -52,6 +52,7 @@ img {
   list-style: none;
   font-size: 16px;
   padding: 0;
+  margin: 0;
 }
 
 .nav-link {
@@ -382,6 +383,7 @@ img {
 }
 
 .section-five .section-title {
+  margin-top: 0;
   margin-bottom: 72px;
 }
 
